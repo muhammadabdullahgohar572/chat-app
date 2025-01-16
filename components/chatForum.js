@@ -14,7 +14,7 @@ import {
 
 import 'stream-chat-react/dist/css/v2/index.css';
 
-const apiKey = 'dz5f4d5kzrue';
+const apiKey = 'bxfuxpqtdst7';
 const userId = 'solitary-bar-7';
 const userName = 'solitary';
 const userToken =
