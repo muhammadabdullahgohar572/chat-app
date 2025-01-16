@@ -17,7 +17,7 @@ export const GET = async () => {
     console.log("Generated User Token:", token);
 
     // Return a JSON response
-    return NextResponse.json({
+    return NextResponse.json(token,{
       message: "Hi, I am Abdullah and I am a Software Engineer.",
       token, // Include the token in the response
     });

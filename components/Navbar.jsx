@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const user=useUser()
 
-  console.info(user.user.id)
+  console.info(user.user)
 
 
   return (
