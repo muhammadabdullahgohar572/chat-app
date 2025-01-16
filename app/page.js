@@ -46,53 +46,61 @@ export default function Home() {
 
       {/* Features Section with Images */}
       <section className="py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-6 sm:px-12">
-          <h2 className="text-3xl font-bold text-center mb-12">Features</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Feature 1 */}
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <Image
-                src={no2}
-                alt="Real-Time Messaging"
-                width={96}
-                height={96}
-                className="mx-auto mb-4"
-              />
-              <h3 className="text-xl font-semibold mb-2">
-                Real-Time Messaging
-              </h3>
-              <p>Enjoy instant messaging with blazing-fast delivery speeds.</p>
-            </div>
-            {/* Feature 2 */}
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <Image
-                src={no3}
-                alt="Secure Encryption"
-                width={96}
-                height={96}
-                className="mx-auto mb-4"
-              />
-              <h3 className="text-xl font-semibold mb-2">Group Chats</h3>
-              <p>Collaborate and engage with your team or community</p>
-            </div>
-            {/* Feature 3 */}
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <Image
-                src={no4}
-                alt="Cross-Platform Support"
-                width={96}
-                height={96}
-                className="mx-auto mb-4"
-              />
-              <h3 className="text-xl font-semibold mb-2">File Sharing</h3>
-              <p>Easily exchange documents, images, and media</p>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="max-w-7xl mx-auto px-6 sm:px-12">
+    <h2 className="text-3xl font-bold text-center mb-12">Features</h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Feature 1 */}
+      <div className="bg-white transform transition-all duration-300 p-6 rounded-lg shadow-lg text-center hover:scale-105 hover:shadow-xl">
+        <Image
+          src={no2}
+          alt="Real-Time Messaging"
+          width={96}
+          height={96}
+          className="mx-auto mb-4"
+        />
+        <h3 className="text-xl font-semibold mb-2">Real-Time Messaging</h3>
+        <p>Enjoy instant messaging with blazing-fast delivery speeds.</p>
+      </div>
+      {/* Feature 2 */}
+      <div className="bg-white transform transition-all duration-300 p-6 rounded-lg shadow-lg text-center hover:scale-105 hover:shadow-xl">
+        <Image
+          src={no3}
+          alt="Secure Encryption"
+          width={96}
+          height={96}
+          className="mx-auto mb-4"
+        />
+        <h3 className="text-xl font-semibold mb-2">Group Chats</h3>
+        <p>Collaborate and engage with your team or community.</p>
+      </div>
+      {/* Feature 3 */}
+      <div className="bg-white transform transition-all duration-300 p-6 rounded-lg shadow-lg text-center hover:scale-105 hover:shadow-xl">
+        <Image
+          src={no4}
+          alt="Cross-Platform Support"
+          width={96}
+          height={96}
+          className="mx-auto mb-4"
+        />
+        <h3 className="text-xl font-semibold mb-2">File Sharing</h3>
+        <p>Easily exchange documents, images, and media.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+ 
+
+
+
+
 
       <div class="grid  mb-24 gap-6 px-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
-        <div class="bg-white shadow-md rounded-lg p-6 max-w-sm border-2 transform transition-all duration-300 hover:scale-105 hover:border-blue-700 hover:bg-blue-100 hover:shadow-lg">
+        <div class="bg-white shadow-md rounded-lg p-6 max-w-sm border-2 transform transition-all duration-300 hover:scale-105 hover:border-blue-700  hover:shadow-lg">
           <h2 class="text-2xl font-semibold text-gray-800">Standard</h2>
           <p class="mt-2 text-gray-600">1 license for only 1 activation</p>
           <div class="mt-4 flex items-baseline space-x-2">
@@ -109,7 +117,7 @@ export default function Home() {
           </ul>
         </div>
 
-        <div class="bg-white shadow-md rounded-lg p-6 max-w-sm border-2 transform transition-all duration-300 hover:scale-105 hover:border-blue-700 hover:bg-blue-100 hover:shadow-lg">
+        <div class="bg-white shadow-md rounded-lg p-6 max-w-sm border-2 transform transition-all duration-300 hover:scale-105 hover:border-blue-700  hover:shadow-lg">
           <h2 class="text-2xl font-semibold text-gray-800">Extended</h2>
           <p class="mt-2 text-gray-600">1 license for up to 3 activations</p>
           <div class="mt-4 flex items-baseline space-x-2">
@@ -126,7 +134,7 @@ export default function Home() {
           </ul>
         </div>
 
-        <div class="bg-white shadow-md rounded-lg p-6 max-w-sm border-2 transform transition-all duration-300 hover:scale-105 hover:border-blue-700 hover:bg-blue-100 hover:shadow-lg">
+        <div class="bg-white shadow-md rounded-lg p-6 max-w-sm border-2 transform transition-all duration-300 hover:scale-105 hover:border-blue-700  hover:shadow-lg">
           <h2 class="text-2xl font-semibold text-gray-800">Standard</h2>
           <p class="mt-2 text-gray-600">1 license for only 1 activation</p>
           <div class="mt-4 flex items-baseline space-x-2">
@@ -143,6 +151,13 @@ export default function Home() {
           </ul>
         </div>
       </div>
+
+
+
+
+
+
+
     </main>
   );
 }
