@@ -2,25 +2,23 @@ import { NextResponse } from "next/server";
 import { StreamChat } from "stream-chat";
 
 const apiKey = "bxfuxpqtdst7";
-const apiSecret = "vzszktvcwdhbkkzzt8wp4cfujykjucgjnx23x874v7822a6z4hp3rc34sp4xc8rh";
-const userId = "user_2rgBtewRMEKDqpdyC6EEazJcdAx";
+const apiSecret =
+  "vzszktvcwdhbkkzzt8wp4cfujykjucgjnx23x874v7822a6z4hp3rc34sp4xc8rh";
 
-export const GET = async () => {
+export const POST = async (request) => {
   try {
-    // Create a StreamChat server client
+    // Parse the request body as JSON
     const serverClient = StreamChat.getInstance(apiKey, apiSecret);
-    
-    // Generate a user token
-    const token = serverClient.createToken(userId);
+    const user = await request.json();
 
-    // Log the token (optional, for debugging purposes)
-    console.log("Generated User Token:", token);
+    const token = serverClient.createToken(user.data.id);
 
-    // Return a JSON response
-    return NextResponse.json(token,{
-      message: "Hi, I am Abdullah and I am a Software Engineer.",
-      token, // Include the token in the response
-    });
+    console.log("Token generated:", token);
+
+    return NextResponse.json(
+      { message: "Token generated successfully." },
+      { status: 200 }
+    );
   } catch (error) {
     console.error("Error generating token:", error);
     return NextResponse.json(

@@ -1,14 +1,14 @@
 "use client";
-import { UserButton, useUser } from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { useState } from "react";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const user=useUser()
+  // const user=useUser()
 
-  console.info(user.user)
+  // console.info(user.user)
 
 
   return (

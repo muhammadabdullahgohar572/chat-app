@@ -1,6 +1,5 @@
-
-"use client"
-import { useState, useEffect } from 'react';
+"use client";
+import { useState, useEffect } from "react";
 import {
   useCreateChatClient,
   Chat,
@@ -10,15 +9,14 @@ import {
   MessageList,
   Thread,
   Window,
-} from 'stream-chat-react';
+} from "stream-chat-react";
 
-import 'stream-chat-react/dist/css/v2/index.css';
+import "stream-chat-react/dist/css/v2/index.css";
 
-const apiKey = 'bxfuxpqtdst7';
-const userId = 'solitary-bar-7';
-const userName = 'solitary';
-const userToken =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoic29saXRhcnktYmFyLTciLCJleHAiOjE3MzcwNzY1MzB9.wHMetTi_GKB36Pm3d0sk36RG4NZqIwZd07bKlcjDKP0';
+const apiKey = "bxfuxpqtdst7";
+const userId = "user_2rgBtewRMEKDqpdyC6EEazJcdAx";
+const userName = "Abdullah";
+const userToken ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNlcl8ycmdCdGV3Uk1FS0RxcGR5QzZFRWF6SmNkQXgifQ.UvwncpL9XJBGEC85RVetxaB3uEIl0EaSGLF-kpch5bs";
 
 const user = {
   id: userId,
@@ -26,7 +24,20 @@ const user = {
   image: `https://getstream.io/random_png/?name=${userName}`,
 };
 
-const ChatForms = () => {
+const ChatForms = ({slug}) => {
+   
+  // fun toTittleCASE
+
+  function toTitleCase(str) {
+    return str.replace(
+      /\b[a-z]/g,
+      (char) => char.toUpperCase()
+      
+    );
+  }
+
+
+
   const [channel, setChannel] = useState(null);
   const client = useCreateChatClient({
     apiKey,
@@ -37,16 +48,16 @@ const ChatForms = () => {
   useEffect(() => {
     if (!client) return;
 
-    const channel = client.channel('messaging', 'custom_channel_id', {
-      image: 'https://getstream.io/random_png/?name=react',
-      name: 'Talk about React',
+    const channel = client.channel("messaging", slug, {
+      image: "https://getstream.io/random_png/?name=react",
+      name:toTitleCase(slug.replace(/-/g, " "))+" Dicusss",
       members: [userId],
     });
 
     setChannel(channel);
   }, [client]);
 
-  if (!client) return <div>Setting up client & connection...</div>;
+  if (!client) return <div>Jisut a  Min</div>;
 
   return (
     <Chat client={client}>
