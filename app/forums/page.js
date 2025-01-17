@@ -14,32 +14,32 @@ const Fourms = () => {
       title: "Python",
       description: "Lets discuss everything related to Python",
       icon: no2,
-      slug: "Python",
+      slug: "Python-chat",
     },
     {
       title: "JavaScript",
       description: "Learn and share JavaScript knowledge.",
       icon: no5,
-      slug: "JavaScript",
+      slug: "JavaScript-chat",
     },
     {
       title: "React",
       description: "Build amazing user interfaces with React.",
       icon: no4,
-      slug: "React",
+      slug: "React-chat",
     },
     {
       title: "CSS",
       description: "Explore the world of designing and CSS",
       icon: no3,
-      slug: "CSS",
+      slug: "CSS-chat",
     },
     {
       title: "Web Development",
       description:
         "Discuss front-end, back-end, and full-stack web development",
       icon: no1,
-      slug: "Web Development",
+      slug: "Web Development-chat",
     },
   ];
 
